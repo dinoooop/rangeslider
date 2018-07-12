@@ -1,0 +1,19 @@
+.subscribers-calc H3 {
+	color: #000;
+	text-align: center;
+	font-size: 32px;
+}
+.subscribers-calc p {
+	font-size: 25px;
+	color: #999;
+	text-align: center;
+
+}
+
+.subscribers-calc .subscribers, .price{
+	color: #5CA3D7;
+}
+
+.subscribers-calc .contact-msg {
+	display: none;
+}
