@@ -1,0 +1,44 @@
+.rs-table-form tr {
+	height: 50px;
+}
+
+.rs-table-form input[type="number"] {
+	height: inherit;
+	padding: 10px;
+	width: 100%;
+}
+
+.rs-table-form .add, .remove{
+	height: 40px;
+}
+
+.rs-table-form tr:first-child .remove{
+	display: none;
+}
+
+.rs-table-form {
+	float: left
+}
+
+.rs-general {
+	background-color: #FFF;
+	float: right;
+	padding: 20px;
+	width: 500px;
+	margin: 50px 55px;
+	filter: drop-shadow(0px 0px 4px #CCC);
+}
+
+.rs-general input[type="text"] {
+	height: 40px;
+	padding: 10px;
+	width: 100%;
+}
+
+.rs-general th {
+	width: 100px;
+}
+
+.rs-general table {
+	width: 100%
+}
