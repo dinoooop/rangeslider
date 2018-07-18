@@ -1,6 +1,10 @@
 jQuery(function($){
 
-	var subscribers_range, price_range = [];
+	var subscribers_range, price_range, url_range = [];
+	
+	function numberWithCommas(x){
+  		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
 	
 	function set_respective_price(data){
 		var subscribers = data.from_value;
@@ -8,14 +12,20 @@ jQuery(function($){
 
 		var index = subscribers_range.indexOf(subscribers);
 		var price = price_range[index];
-		$(".subscribers").html(subscribers);
+		var uri = url_range[index];
+
+		$(".subscribers").html(numberWithCommas(subscribers));
+
 		if(percentage == 100){
 			$(".contact-msg").show();
-			$(".normal-msg").hide();
+			$(".result").hide();
 		} else {
+			var print_price = numberWithCommas(price)
 			$(".contact-msg").hide();
-			$(".normal-msg").show();
-			$(".price").html("$" + price);
+			$(".result").show();
+			$(".price").html("$" + print_price);
+			$(".btn-price").html("$" + print_price + " / MONTH");
+			$(".btn-price").attr("href", uri);
 		}
 	}
 
@@ -23,6 +33,7 @@ jQuery(function($){
 
     	subscribers_range  = data.subscription;
     	price_range  = data.price;
+    	url_range  = data.urls;
     	
     	$("#subscribers_range").ionRangeSlider({
 	    	grid: true,
@@ -32,7 +43,6 @@ jQuery(function($){
 		        set_respective_price(data);
 		    },
 		    onChange: function (data) {
-		    	console.log(data);
 		        set_respective_price(data);
 		    },
 	    });

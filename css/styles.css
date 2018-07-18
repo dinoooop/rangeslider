@@ -1,23 +1,59 @@
 .subscribers-calc {
-	padding: 50px;
-	
+	padding: 50px 0;
+	max-width: 800px;
+	margin: 0 auto;
 }
-.subscribers-calc H3 {
-	color: #000;
+
+.subscribers-calc H2 {
+	color: #0255CA;
 	text-align: center;
-	font-size: 32px;
 }
+
 .subscribers-calc p {
 	font-size: 25px;
 	color: #999 !important;
 	text-align: center;
-
 }
 
 .subscribers-calc span.subscribers,.subscribers-calc span.price{
-	color: #5CA3D7 !important;
+	color: #27D357 !important;
 }
 
 .subscribers-calc .contact-msg {
 	display: none;
+}
+
+.irs-bar {
+	background: #27D357;
+	border-top: 1px solid #27D357;
+	border-bottom: 1px solid #27D357;
+}
+
+.irs-bar-edge {
+	background: #27D357;
+	border: 1px solid #27D357;
+}
+
+.irs-from, .irs-to, .irs-single {
+	background: #27D357;
+}
+
+.irs-slider{
+	background: #27D357;
+	border: 2px solid #fff;	
+}
+
+.info {
+	margin-top: 35px;
+	text-align: center;
+}
+
+.irs-grid-text {
+	font-size: 12px;
+}
+a.btn-price {
+	border: 2px solid #27D357;
+	color: #27D357;
+	display: inline-block;
+	padding: 10px 20px;
 }

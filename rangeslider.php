@@ -12,7 +12,7 @@ define('DRS_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 require_once DRS_PLUGIN_PATH . 'inc/functions.php';
 
-add_action('wp_enqueue_scripts', 'drs_scripts');
+add_action('wp_enqueue_scripts', 'drs_scripts', 15);
 
 function drs_scripts() {
     wp_enqueue_style('rs-rangeslider', DRS_PLUGIN_URL . 'css/ion.rangeSlider.css');
@@ -75,6 +75,7 @@ function drs_range_settings_page() {
         $input = [];
         $input['subscription'] = $_POST['subscription'];
         $input['price'] = $_POST['price'];
+        $input['urls'] = $_POST['urls'];
         
         update_option('drs_options_subscriber_price', $input);
         $options_subscriber_price = get_option('drs_options_subscriber_price', drs_default('drs_options_subscriber_price'));

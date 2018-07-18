@@ -1,8 +1,12 @@
 <div class="subscribers-calc">
-	<h3><?php echo $options_general['title']; ?></h3>
+	<h2><?php echo $options_general['title']; ?></h2>
 	<input type="text" id="subscribers_range" name="example_name" value="" />
 	<div class="info">
-		<p class="normal-msg"><?php echo nl2br($options_general['result']); ?></p>
+		<div class="result">
+			<p class="normal-msg"><?php echo nl2br($options_general['result']); ?></p>
+			<p>BUY NOW</p>
+			<a href="#" class="btn-price" target="_blank">$9.99/Month</a>
+		</div>
 		<p class="contact-msg"><?php echo nl2br($options_general['peak']); ?></p>
 	</div>
 </div>

@@ -4,12 +4,13 @@
 		
 		<h1>Range Slider Settings</h1>
 
-		<form method="post" action="">
+		<form method="post" action="" name="create_subscription_price_form">
 			<table >
 				<thead>
 					<tr>
 						<th>Subscription</th>
 						<th>Price</th>
+						<th>URL</th>
 						<th></th>
 						<th></th>
 					</tr>
@@ -19,6 +20,7 @@
 					<tr>
 						<td><input type="number" name="subscription[]" value="<?php echo $value; ?>" required></td>
 						<td><input type="number" name="price[]" value="<?php echo $options_subscriber_price['price'][$key]; ?>" required></td>
+						<td><input type="url" name="urls[]" value="<?php echo $options_subscriber_price['urls'][$key]; ?>" required></td>
 						<td><button class="add" type="button"> + </button></td>
 						<td><button class="remove" type="button"> - </button></td>
 					</tr>
